@@ -12,41 +12,43 @@ import org.springframework.stereotype.Component;
 public class WeightAspects {
 
     private static Logger logger = LoggerFactory.getLogger(WeightAspects.class);
-    
+
     @Around("execution(Double com.acme.own.exercises.aop.domain.Tiger.getWeightAtAge(*))")
     public Object correctTigerAge(ProceedingJoinPoint joinPoint) {
         logger.info("stepped into the aspect method");
-        Double ret=0d;
-        
+        Double ret = 0d;
+
         try {
-            ret = (Double)joinPoint.proceed();
+            ret = (Double) joinPoint.proceed();
         } catch (Throwable e) {
             e.printStackTrace();
         }
-        
+
         if (ret > 60) {
             ret = 60d;
         }
-        
+
         logger.info("after the proceed method");
         return ret;
     }
 
-    
-    @Around("execution(Double com.acme.own.exercises.aop.domain.Harcsa.getWeightAtAge(*))")
+    @Around("execution(Double com.acme.own.exercises.aop.domain.Harcsa.getWeightAtAge(Double))")
     public Object correctHarcsaAge(ProceedingJoinPoint joinPoint) {
-        Double ret=0d;
-        
-        try {
-            ret = (Double)joinPoint.proceed();
-        } catch (Throwable e) {
-            e.printStackTrace();
+        Double ret = 0d;
+
+        Object[] args = joinPoint.getArgs();
+        Double age = (Double) args[0];
+
+        if (age > 20d) {
+            ret = 50d;
+        } else {
+            try {
+                ret = (Double) joinPoint.proceed();
+            } catch (Throwable e) {
+                e.printStackTrace();
+            }
         }
-        
-        if (ret > 27.3) {
-            ret = 27.3;
-        }
-        
+
         return ret;
     }
 }

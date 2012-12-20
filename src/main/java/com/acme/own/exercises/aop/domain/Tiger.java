@@ -3,8 +3,6 @@ package com.acme.own.exercises.aop.domain;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.acme.own.exercises.aop.App;
-
 public class Tiger implements Animal {
 
     private String name;
@@ -26,7 +24,7 @@ public class Tiger implements Animal {
         return true;
     }
 
-    public Double getWeightAtAge(double age) {
+    public Double getWeightAtAge(Double age) {
         
         double weight = 3d;
         

@@ -43,7 +43,10 @@ public class App {
         animalStore.listAllAnimalWeightByAge(0.314d);
         animalStore.listAllAnimalWeightByAge(1.41d);
         animalStore.listAllAnimalWeightByAge(2.73d);
-        animalStore.listAllAnimalWeightByAge(27.3d);
+        animalStore.listAllAnimalWeightByAge(19.5d);
+        animalStore.listAllAnimalWeightByAge(20.0d);
+        animalStore.listAllAnimalWeightByAge(20.1d);
+        animalStore.listAllAnimalWeightByAge(20.5d);
         animalStore.listAllAnimalWeightByAge(273d);
     }
 }

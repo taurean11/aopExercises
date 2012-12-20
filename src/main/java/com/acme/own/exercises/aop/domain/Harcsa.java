@@ -3,8 +3,6 @@ package com.acme.own.exercises.aop.domain;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.acme.own.exercises.aop.App;
-
 public class Harcsa implements Animal {
 
     private String name;
@@ -26,11 +24,13 @@ public class Harcsa implements Animal {
         return true;
     }
 
-    public Double getWeightAtAge(double age) {
+    public Double getWeightAtAge(Double age) {
         
-        double weight = 0.000001d;
+        double weight = 50d/20d * age;
         
-        weight += 50d/20d * age;
+        if (weight < 0.000001d) {
+            weight = 0.000001d;
+        }
         
         return weight;
     }

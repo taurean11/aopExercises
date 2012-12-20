@@ -8,7 +8,7 @@ public interface Animal {
     
     boolean isCarnivore();
     
-    Double getWeightAtAge ( double age );
+    Double getWeightAtAge(Double age);
     
     
 }
