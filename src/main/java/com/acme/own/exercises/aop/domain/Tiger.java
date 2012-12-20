@@ -1,10 +1,17 @@
 package com.acme.own.exercises.aop.domain;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.acme.own.exercises.aop.App;
+
 public class Tiger implements Animal {
 
     private String name;
-
+    private static Logger logger = LoggerFactory.getLogger(Tiger.class);
+    
     public Tiger(String name) {
+        logger.info("tiger constructor invoked");
         this.name=name;
     }
     
