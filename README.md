@@ -1,4 +1,0 @@
-aopExercises
-============
-
-AOP in practice
