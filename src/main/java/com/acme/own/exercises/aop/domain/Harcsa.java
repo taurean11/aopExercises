@@ -5,12 +5,12 @@ import org.slf4j.LoggerFactory;
 
 import com.acme.own.exercises.aop.App;
 
-public class Tiger implements Animal {
+public class Harcsa implements Animal {
 
     private String name;
-    private static Logger logger = LoggerFactory.getLogger(Tiger.class);
+    private static Logger logger = LoggerFactory.getLogger(Harcsa.class);
     
-    public Tiger(String name) {
+    public Harcsa(String name) {
         this.name=name;
     }
     
@@ -19,7 +19,7 @@ public class Tiger implements Animal {
     }
 
     public int getNumberOfFeet() {
-        return 4;
+        return 0;
     }
 
     public boolean isCarnivore() {
@@ -28,15 +28,15 @@ public class Tiger implements Animal {
 
     public Double getWeightAtAge(double age) {
         
-        double weight = 3d;
+        double weight = 0.000001d;
         
-        weight += 57d/1.5 * age;
+        weight += 50d/20d * age;
         
         return weight;
     }
 
-    public void howl() {
-        logger.info("Grrrrr!");
+    public void bluBlu() {
+        logger.info("blu-blu-blu...");
     }
     
 }

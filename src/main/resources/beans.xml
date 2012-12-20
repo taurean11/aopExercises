@@ -11,7 +11,9 @@
 	
 	<context:component-scan base-package="com.acme" />	
 	
-	<bean id="bean_id_tigris1" class="com.acme.own.exercises.aop.domain.Tiger" c:name="Tigris1" />
-	<bean id="bean_id_tigris2" class="com.acme.own.exercises.aop.domain.Tiger" c:name="Tigris2" />
+	<bean id="bean_id_tigris" class="com.acme.own.exercises.aop.domain.Tiger" c:name="Tigris" />
+	<bean id="bean_id_harcsa" class="com.acme.own.exercises.aop.domain.Harcsa" c:name="Harcsa" />
+	
+	<aop:aspectj-autoproxy />
 
 </beans>

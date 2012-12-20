@@ -40,7 +40,10 @@ public class App {
         
         AnimalStore animalStore = ctx.getBean(AnimalStore.class);
         
-        animalStore.listAllAnimals();
-
+        animalStore.listAllAnimalWeightByAge(0.314d);
+        animalStore.listAllAnimalWeightByAge(1.41d);
+        animalStore.listAllAnimalWeightByAge(2.73d);
+        animalStore.listAllAnimalWeightByAge(27.3d);
+        animalStore.listAllAnimalWeightByAge(273d);
     }
 }

@@ -19,7 +19,7 @@ public class AnimalStore {
         logger.info("animalstore constructor invoked");
     }
 
-    public void listAllAnimals() {
+    public void listAllAnimalNames() {
 
         if (animalList != null) {
             for (Animal a : animalList) {
@@ -27,5 +27,15 @@ public class AnimalStore {
             }
         }
     }
+    
+    public void listAllAnimalWeightByAge(Double age) {
+
+        if (animalList != null) {
+            for (Animal a : animalList) {
+                System.out.println(a.getName() + " at the age of " + age + ": " + a.getWeightAtAge(age));
+            }
+        }
+    }
+    
 
 }
